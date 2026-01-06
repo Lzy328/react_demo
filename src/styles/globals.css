@@ -9,6 +9,7 @@ body {
     'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #f0f2f5;
 }
 
 code {
@@ -18,4 +19,139 @@ code {
 
 .ant-layout-sider-trigger {
   position: relative;
+}
+
+/* Dashboard 页面样式 */
+.dashboard-container {
+  padding: 24px;
+  min-height: calc(100vh - 64px);
+}
+
+/* 统计卡片样式 */
+.stat-card {
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* 图表卡片样式 */
+.chart-card {
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.chart-card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* 表格卡片样式 */
+.table-card {
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.table-card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* 产品行样式 */
+.product-row {
+  transition: all 0.2s ease;
+}
+
+.product-row:hover {
+  background-color: #fafafa;
+}
+
+/* 进度卡片样式 */
+.progress-card {
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.progress-card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* 监控卡片样式 */
+.monitor-card {
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.monitor-card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* 监控项样式 */
+.monitor-item {
+  margin-bottom: 16px;
+}
+
+/* 动画效果 */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .dashboard-container {
+    padding: 16px;
+  }
+
+  h1.text-2xl {
+    font-size: 1.5rem;
+  }
+}
+
+/* 统计数字动画 */
+.ant-statistic-content-value {
+  animation: countUp 2s ease-out;
+}
+
+@keyframes countUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 卡片标题样式 */
+.ant-card-head-title {
+  font-weight: 600;
+  color: #262626;
+}
+
+/* 进度条样式增强 */
+.ant-progress-line .ant-progress-bg {
+  border-radius: 10px;
+}
+
+/* 饼图和雷达图容器样式 */
+.user-distribution-chart,
+.product-performance-chart {
+  border-radius: 8px;
+  overflow: hidden;
 }
