@@ -1,0 +1,24 @@
+import { BrowserRouter, useRoutes } from 'react-router-dom'
+import { Suspense } from 'react'
+import Layout from './components/Layout'
+import routes from './routes'
+
+// 路由渲染组件
+const RouteRenderer = () => {
+  const renderedRoutes = useRoutes(routes)
+  return renderedRoutes
+}
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Layout>
+        <Suspense fallback={<div>Loading...</div>}>
+          <RouteRenderer />
+        </Suspense>
+      </Layout>
+    </BrowserRouter>
+  )
+}
+
+export default App
