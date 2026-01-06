@@ -373,7 +373,7 @@ const Dashboard: React.FC = () => {
               title="总用户数"
               value={dynamicData.totalUsers}
               prefix={<UserOutlined className="text-green-500" />}
-              valueStyle={{ color: '#3f8600' }}
+              styles={{ content: { color: '#3f8600' } }}
               suffix="人"
             />
           </Card>
@@ -384,7 +384,7 @@ const Dashboard: React.FC = () => {
               title="今日销售额"
               value={dynamicData.todaySales}
               prefix={<DollarOutlined className="text-blue-500" />}
-              valueStyle={{ color: '#1890ff' }}
+              styles={{ content: {color: '#1890ff'} }}
               suffix="元"
             />
           </Card>
@@ -395,7 +395,7 @@ const Dashboard: React.FC = () => {
               title="今日订单"
               value={dynamicData.todayOrders}
               prefix={<ShoppingCartOutlined className="text-purple-500" />}
-              valueStyle={{ color: '#722ed1' }}
+              styles={{ content: { color: '#722ed1' } }}
               suffix="笔"
             />
           </Card>
@@ -406,7 +406,7 @@ const Dashboard: React.FC = () => {
               title="完成率"
               value={dynamicData.completionRate}
               prefix={<BarChartOutlined className="text-orange-500" />}
-              valueStyle={{ color: '#fa8c16' }}
+              styles={{ content: { color: '#fa8c16' } }}
               suffix="%"
             />
           </Card>
@@ -421,7 +421,7 @@ const Dashboard: React.FC = () => {
               title="页面访问量"
               value={dynamicData.pageViews}
               prefix={<EyeOutlined className="text-red-500" />}
-              valueStyle={{ color: '#f5222d' }}
+              styles={{ content: {color: '#f5222d'} }}
               suffix="次"
             />
           </Card>
@@ -432,7 +432,7 @@ const Dashboard: React.FC = () => {
               title="转化率"
               value={dynamicData.conversionRate}
               prefix={<RiseOutlined className="text-cyan-500" />}
-              valueStyle={{ color: '#13c2c2' }}
+              styles={{ content: {color: '#13c2c2'}  }}
               suffix="%"
             />
           </Card>
@@ -443,7 +443,7 @@ const Dashboard: React.FC = () => {
               title="平均客单价"
               value={dynamicData.avgOrderValue}
               prefix={<TrophyOutlined className="text-yellow-500" />}
-              valueStyle={{ color: '#faad14' }}
+              styles={{ content: {color: '#faad14'}  }}
               suffix="元"
             />
           </Card>
@@ -454,7 +454,7 @@ const Dashboard: React.FC = () => {
               title="复购率"
               value={dynamicData.repurchaseRate}
               prefix={<PieChartOutlined className="text-indigo-500" />}
-              valueStyle={{ color: '#531dab' }}
+              styles={{ content: {color: '#531dab'} }}
               suffix="%"
             />
           </Card>
@@ -523,7 +523,7 @@ const Dashboard: React.FC = () => {
                   '0%': '#108ee9',
                   '100%': '#87d068',
                 }}
-                strokeWidth={12}
+                size={[0, 12]}
               />
               <div className="mt-2 text-right text-sm text-gray-500">目标：¥5,000,000</div>
             </div>
@@ -539,7 +539,7 @@ const Dashboard: React.FC = () => {
                   '0%': '#108ee9',
                   '100%': '#87d068',
                 }}
-                strokeWidth={12}
+                size={[0, 12]}
               />
               <div className="mt-2 text-right text-sm text-gray-500">目标：¥5,000,000</div>
             </div>
@@ -554,7 +554,7 @@ const Dashboard: React.FC = () => {
                   '0%': '#108ee9',
                   '100%': '#87d068',
                 }}
-                strokeWidth={12}
+                size={[0, 12]}
               />
               <div className="mt-2 text-right text-sm text-gray-500">目标：¥6,000,000</div>
             </div>
@@ -574,7 +574,7 @@ const Dashboard: React.FC = () => {
                   <Progress
                     percent={item.value}
                     strokeColor={item.value > 80 ? '#ff4d4f' : item.value > 60 ? '#fa8c16' : '#52c41a'}
-                    strokeWidth={8}
+                    size={[0, 8]}
                     showInfo={false}
                   />
                 </div>
