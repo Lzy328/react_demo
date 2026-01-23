@@ -1,6 +1,7 @@
 #!/bin/bash
 
 set -e
+pnpm -v
 
 echo "===== 前端 setup.sh 开始 ====="
 
