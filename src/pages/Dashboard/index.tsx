@@ -362,7 +362,7 @@ const Dashboard: React.FC = () => {
   return (
     <div className="dashboard-container">
       <h1 className="text-2xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-        数据仪表盘
+        数据仪表盘1
       </h1>
 
       {/* 核心指标卡片 - 第一行 */}
