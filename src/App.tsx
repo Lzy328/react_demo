@@ -1,4 +1,4 @@
-import { BrowserRouter, useRoutes } from 'react-router-dom'
+import { HashRouter, useRoutes } from 'react-router-dom'
 import { Suspense } from 'react'
 import Layout from './components/Layout'
 import routes from './routes'
@@ -11,13 +11,13 @@ const RouteRenderer = () => {
 
 function App() {
   return (
-    <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
+    <HashRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
       <Layout>
         <Suspense fallback={<div>Loading...</div>}>
           <RouteRenderer />
         </Suspense>
       </Layout>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
